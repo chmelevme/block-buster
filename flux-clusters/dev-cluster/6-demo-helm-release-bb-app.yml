@@ -12,8 +12,8 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: 6-demo-source-helm-bb-app
-      driftDetection:
-        mode: enabled
+  driftDetection:
+    mode: enabled
   interval: 10s
   targetNamespace: 6-demo
   values:
