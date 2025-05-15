@@ -13,7 +13,7 @@ spec:
 apiVersion: notification.toolkit.fluxcd.io/v1beta3
 kind: Alert
 metadata:
-  name: hr
+  name: podinfo
   namespace: flux-system
 spec:
   providerRef:
@@ -22,4 +22,4 @@ spec:
   eventSources:
     - kind: Kustomization
       name: "*"
-      namespace: "*"
+      namespace: flux-system
