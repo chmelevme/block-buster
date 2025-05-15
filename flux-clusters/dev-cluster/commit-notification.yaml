@@ -20,6 +20,6 @@ spec:
     name: flux-system
   eventSeverity: info
   eventSources:
-    - kind: HelmRelease
+    - kind: Kustomization
       name: "*"
-      namespace: "6-demo"
+      namespace: "*"
