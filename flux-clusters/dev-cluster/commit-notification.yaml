@@ -22,4 +22,4 @@ spec:
   eventSources:
     - kind: HelmRelease
       name: "*"
-      namespace: "*"
+      namespace: "6-demo"
