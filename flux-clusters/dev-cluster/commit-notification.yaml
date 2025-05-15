@@ -1,0 +1,24 @@
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Provider
+metadata:
+  name: flux-system
+  namespace: flux-system
+spec:
+  type: github
+  address: https://github.com/chmelevme/block-buster
+  secretRef:
+    name: github
+---
+apiVersion: notification.toolkit.fluxcd.io/v1beta3
+kind: Alert
+metadata:
+  name: hr
+  namespace: flux-system
+spec:
+  providerRef:
+    name: flux-system
+  eventSeverity: info
+  eventSources:
+    - kind: HelmRelease
+      name: *
+      namespace: *
